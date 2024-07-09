@@ -4,11 +4,11 @@ from shoppingList import ShoppingList
 
 
 MAIN_MENU = [
-    'Add Item',
-    'Remove Item',
-    'Print List',
-    'Save List',
-    'QUIT'
+    'Add Item', # Option 1
+    'Remove Item', # Option 2
+    'Print List', # Option 3
+    'Save List', # Option 4 
+    'QUIT' # Option 5
 ]
 
 
