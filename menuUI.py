@@ -5,4 +5,3 @@ def printMenu(menu):
 
     for i in range(0, len(menu)):
         print(f'({i + 1}) {menu[i]}')
-

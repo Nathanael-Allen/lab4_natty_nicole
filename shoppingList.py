@@ -1,24 +1,39 @@
-from valid import valid_string
+from valid import valid_string, valid_int
 from pathlib import Path
+from sorting import sort_list
 
 class ShoppingList:
     def __init__(self):
         self.myList = ['test_1', 'test_2', 'test_3']
 
-    def printList(self):
-        '''
-        Needs to check if list is empty and if not print out each
-        item of the list on a new line
-        '''
-        pass
+    def sort_list(self):
+        return sort_list(self.myList)
 
-    def addItem(self):
+    def display_list(self):
+        if len(self.myList) == 0:
+            # If there is nothing in your list, tell the user that it's empty.
+            print('No items in your list!')
+        else:
+            # Otherwise, print the list out on separate lines.
+            for number, item in enumerate(self.myList):
+                print(f'{number + 1}: {item}')  # + 1 added to visually start list at number 1 instead of 0.
+
+
+    def add_item(self):
         # Needs to take a string value as input and append it to the list
-        pass
+        user_input = valid_string('Add an item: ')
+        self.myList.append(user_input)
 
-    def removeItem(self, option=int):
+    def remove_item(self, option=int):
         # Needs to take the option/index as an argument and pop it from the list.
-        pass
+        self.display_list()
+        item_number_to_remove = valid_int("Enter item number to remove item: ")
+        # -1 added to compensate for 1 added in the add_item function to visually start list number at 1
+        del self.myList[item_number_to_remove - 1]
+        print()
+        print("Updated List:")
+        self.display_list()
+
 
     def saveList(self):
         listName = valid_string('Name your list: ') + '.txt'
