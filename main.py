@@ -17,7 +17,7 @@ def main():
     print('SHOPPING LIST')
     while True:
         printMenu(MAIN_MENU)
-        option = validOption(MAIN_MENU)
+        option = valid_option(MAIN_MENU)
 
         match option:
             case 1:
@@ -26,7 +26,7 @@ def main():
                 print('Remove item')                    
             case 3:
                 shoppingList.printList()
-                if(not enterKey('\nEnter for main menu or type "exit" to close program: ')):
+                if(not enter_key('\nEnter for main menu or type "exit" to close program: ')):
                     print('Program exiting...')
                     break
             case 4:

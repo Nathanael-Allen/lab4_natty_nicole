@@ -1,4 +1,4 @@
-from valid import validString
+from valid import valid_string
 from pathlib import Path
 
 class ShoppingList:
@@ -21,7 +21,7 @@ class ShoppingList:
         pass
 
     def saveList(self):
-        listName = validString('Name your list: ') + '.txt'
+        listName = valid_string('Name your list: ') + '.txt'
         listPath = Path().joinpath(Path().resolve(), 'lists', listName)
         try:
             file = open(listPath, 'x')

@@ -1,87 +1,101 @@
-def validFloatInput(question) -> float:
+def valid_float_input(question) -> float:
     while True:
         try:
-            usrInput = input(question).strip()
-            if(not usrInput):
+            usr_input = input(question).strip()
+            if not usr_input:
                 raise ValueError
-            if(float(usrInput) < 0):
+            if float(usr_input) < 0:
                 raise ValueError
             else:
-                return float(usrInput)
-        except(Exception):
+                return float(usr_input)
+        except Exception:
             print('ERROR: Invalid input')
 
 
-def validString(question) -> str:
-    while True:    
+def valid_string(question) -> str:
+    while True:
         try:
-            usrInput = input(question).strip()
-            if(not usrInput):
+            usr_input = input(question).strip()
+            if not usr_input:
                 raise ValueError
             else:
-                return usrInput
-        except(Exception):
+                return usr_input
+        except Exception:
             print('ERROR: Invalid input')
 
 
-def validYN(question) -> bool:
+def valid_yn(question) -> bool:
     while True:
         try:
-            usrInput = input(question).strip().lower()
-            if(not usrInput):
+            usr_input = input(question).strip().lower()
+            if not usr_input:
                 raise ValueError
-            elif(usrInput == 'y' or usrInput == 'yes'):
+            elif usr_input == 'y' or usr_input == 'yes':
                 return True
-            elif(usrInput == 'n' or usrInput == 'no'):
+            elif usr_input == 'n' or usr_input == 'no':
                 return False
             else:
                 raise Exception
         except(Exception):
             print('ERROR: Invalid input')
 
-def validInt(question='Input valid integer: '):
+
+def valid_az(question) -> str:
     while True:
         try:
-            usrInput = input(question).strip()
-            if(not usrInput):
+            usr_input = input(question).strip().lower()
+            if not usr_input:
                 raise ValueError
-            if(int(usrInput) < 0):
+            elif usr_input == 'a' or usr_input == 'z':
+                return usr_input
+            else:
+                raise Exception
+        except(Exception):
+            print("ERROR: Please either enter an 'A' or 'Z'")
+
+
+def valid_int(question='Input valid integer: '):
+    while True:
+        try:
+            usr_input = input(question).strip()
+            if not usr_input:
+                raise ValueError
+            if int(usr_input) < 0:
                 raise ValueError
             else:
-                return int(usrInput)
+                return int(usr_input)
         except(Exception):
             print('ERROR: Not a valid Input')
 
-def validOption(menu ,question='Select option: '):
-    '''
+
+def valid_option(a_list, question='Select option: '):
+    """
     Takes the menu list as first argument and input prompt as second argument.
     Needs to check if user input is A: a positive integer greater than 0
     and B: Is not greater than the length of the list
-    '''
+    """
     while True:
-        try:    
-            usrInput = int(input(question).strip())
-            if(not usrInput):
+        try:
+            usr_input = int(input(question).strip())
+            if not usr_input:
                 raise ValueError
-            if(usrInput < 0 or usrInput > len(menu)):
+            if usr_input < 1 or usr_input > len(a_list):
                 print('ERROR: Option not in list')
             else:
-                return usrInput
+                return usr_input
         except(Exception):
             print('ERROR: Not a valid Input')
 
-def enterKey(question='Press enter'):
+
+def enter_key(question='Press enter'):
     while True:
         try:
-            usrInput = input(question).lower().strip()
-            if(usrInput == ''):
+            usr_input = input(question).lower().strip()
+            if usr_input == '':
                 return True
-            elif(usrInput == 'exit'):
+            elif usr_input == 'exit':
                 return False
             else:
                 continue
         except(Exception):
             continue
-
-
-        
