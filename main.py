@@ -1,3 +1,12 @@
+# Authors: Nathanael Allen, Nicole Sausville
+# Assignment: Lab 4
+# Date: 07/10/24
+# Description: This menu driven program allows a user to create and edit a shopping list as well as 
+# save it to the file system as a text file
+
+# Contributions: main.py, shoppingList.py, and valid.py were a collaboration between the two of us
+# each of us contributing about 50% of each file, Nathanael added menuUI module and Nicole added sorting.py.
+
 from valid import *
 from menuUI import *
 from shoppingList import ShoppingList
