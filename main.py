@@ -24,13 +24,14 @@ def main():
 
         match option:
             case 1:
-                print()
-                print('Add item')
+                print('\nAdd item')
                 my_shopping_list.add_item()
             case 2:
-                print()
-                print('Remove item')
-                my_shopping_list.remove_item()
+                if len(my_shopping_list.myList) > 0:
+                    print('\nRemove item')
+                    my_shopping_list.remove_item()
+                else:
+                    print('List is empty...')
             case 3:
                 print()
                 my_shopping_list.display_list()
@@ -38,19 +39,16 @@ def main():
                     print('Program exiting...')
                     break
             case 4:
-                print()
-                print('List Sorted')
+                print('\nList Sorted')
                 my_shopping_list.sort_list()
 
             case 5:
-                print()
                 if(len(my_shopping_list.myList) > 0):
                     my_shopping_list.saveList()
                 else:
                     print('List empty nothing to save...')
             case 6:
-                print()
-                print('Program exiting...')
+                print('\nProgram exiting...')
                 break
         
 

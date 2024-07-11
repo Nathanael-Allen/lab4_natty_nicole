@@ -4,7 +4,7 @@ from sorting import sort_list
 
 class ShoppingList:
     def __init__(self):
-        self.myList = ['test_1', 'test_2', 'test_3']
+        self.myList = []
 
     def sort_list(self):
         return sort_list(self.myList)
@@ -13,6 +13,7 @@ class ShoppingList:
         if len(self.myList) == 0:
             # If there is nothing in your list, tell the user that it's empty.
             print('No items in your list!')
+            return
         else:
             # Otherwise, print the list out on separate lines.
             for number, item in enumerate(self.myList):
