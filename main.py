@@ -12,7 +12,7 @@ from menuUI import *
 from shoppingList import ShoppingList
 import sorting
 
-
+# A list of strings containing categories for the main menu
 MAIN_MENU = [
     'Add Item',  # Option 1
     'Remove Item',  # Option 2
@@ -28,9 +28,10 @@ def main():
     print('SHOPPING LIST')
     while True:
         print()
-        printMenu(MAIN_MENU)
+        print_menu(MAIN_MENU)
         option = valid_option(MAIN_MENU)
 
+# This will be a switch statement that acts as our menu
         match option:
             case 1:
                 print('\nAdd item')
@@ -52,7 +53,7 @@ def main():
 
             case 5:
                 if(len(my_shopping_list.myList) > 0):
-                    my_shopping_list.saveList()
+                    my_shopping_list.save_list()
                 else:
                     print('List empty nothing to save...')
             case 6:

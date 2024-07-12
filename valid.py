@@ -1,3 +1,5 @@
+# Nathanael's module
+
 def valid_float_input(question) -> float:
     while True:
         try:

@@ -1,4 +1,4 @@
-def printMenu(menu):
+def print_menu(menu):  # Nathanael's module
     print('-' * 10)
     print('MENU')
     print('-' * 10)
