@@ -93,8 +93,6 @@ def enter_key(question='Press enter'):
             usr_input = input(question).lower().strip()
             if usr_input == '':
                 return True
-            elif usr_input == 'exit':
-                return False
             else:
                 continue
         except(Exception):

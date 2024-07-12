@@ -44,9 +44,8 @@ def main():
             case 3:
                 print()
                 my_shopping_list.display_list()
-                if(not enter_key('\nEnter for main menu or type "exit" to close program: ')):
-                    print('Program exiting...')
-                    break
+                if(enter_key('\nPress enter for main menu...')):
+                    continue
             case 4:
                 print('\nList Sorted')
                 my_shopping_list.sort_list()
